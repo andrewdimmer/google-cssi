@@ -10,6 +10,8 @@ This program is designed to help TAs automatically check in with their students 
 Go to the [template](https://drive.google.com/open?id=1aMgesjItl6rur0XAhSf4itqCfONWprCRxVMAUpxBHYM) and navigate to "File" -> "Make a copy". Create a copy in a folder on your Google Drive where you know where it will be.
 
 This should create a copy of the spreadsheet, check-in form, and script file.
+
+> Please then grant Morgan Lynch edit access to the spreadsheet so that she can view the check-in information as well.
 ### 2. Add Students
 Next, you need to add your students to the spreadsheet. All of the sheets in the spreadsheet pull their user data from one master list, so you only need to add the names once.
 

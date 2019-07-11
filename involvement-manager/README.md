@@ -31,7 +31,7 @@ To create and add the pre-filled link to the script:
 1. Open the form
 2. Click the three dots in the upper right-hand corner
 3. Click on "Get pre-filled link"
-![Create A Link](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/CreateALink.png)
+![Create A Link](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/CreateALink.png)
 4. Enter "FIRST" in the `First Name` field
 5. Enter "LAST" in the `Last Name` field
 6. Enter "EMAIL" in the `Email Address` field
@@ -55,13 +55,13 @@ To run the test function:
 3. Click on "Script editor"
 4. Edit lines 9-11 to add your name and email
 5. Select the `test` function from the runner drop down, then click run
-![Run a Function](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/RunAFunction.png)
+![Run a Function](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/RunAFunction.png)
 
 When you run a script the first time, it asks you to confirm the permission scope. When the "Authorization required" pop-up comes up, click "Review Permissions", then Login.
-![Authorization Required](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/AuthorizationRequired.png)
+![Authorization Required](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/AuthorizationRequired.png)
 
 Under some circumstances, there is an error saying the "The app isn't verified". Click "Advanced" then "Go to Google CSSI 2019 Involvement Sheet" to get past this error. After you do that, you can just click the "Allow" button, and the email should send.
-![The app isn't verified](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/AppIsntVerified.png)
+![The app isn't verified](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/AppIsntVerified.png)
 
 Check your inbox to see that the email delivered.
 ### 5. Edit the email content
@@ -83,8 +83,8 @@ The parser also supports the following short codes:
 * `[FIRST_NAME_SHORTCODE]` : replaces the short code with the student's first name
 * `[LAST_NAME_SHORTCODE]` : replaces the short code with the student's last name
 * `[LINK_SHORTCODE]` : replaces the short code with the student's pre-filled form link
-..- HTML Body: displays the text "Click here to check in."
-..- Plain Text Body: displays the raw hyperlink (ex. https://form-link-here)
+  - HTML Body: displays the text "Click here to check in."
+  - Plain Text Body: displays the raw hyperlink (ex. https://form-link-here)
 
 If you would like an example of what to say for the email [here](https://docs.google.com/document/d/1o_YfPdB8OinPgO_C0AqCorRt_3Zmmldh74l2a-zPdII/edit?usp=sharing) is the email I will be using.
 
@@ -107,7 +107,7 @@ To do this:
 5. Click on "Current project's triggers"
 6. Click "+ Add Trigger" in the bottom right hand corner for each trigger you wish to add. Follow the image below for the settings to create a date-time trigger.
 
-![Date Time Trigger](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/CreateATrigger.png)
+![Date Time Trigger](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/CreateATrigger.png)
 
 Recommended dates for setting up the triggers based on when the spreadsheet things the week starts are on Thursday nights so that students can report what they have done for the week anytime between Friday and Monday.
 * 2019-07-11 20:00
@@ -145,11 +145,11 @@ To select the week for which the check-in data is displayed, select the week num
 
 Finally, there is some useful conditional formatting to help you identify possible issues and discuss them with your students:
 * "What did I work on this week?" (column D) highlights red if the latest week they are working on is more than two weeks behind the current week (they are working on week 2 work during week 5 of the program)
-..- By the time that this highlights red, they will need to do more than one week of the Coursera class per week of the summer to finish before the school year starts
+  - By the time that this highlights red, they will need to do more than one week of the Coursera class per week of the summer to finish before the school year starts
 * "What did I work on this week?" (column D) highlights yellow if it is blank. This is something you would likely want to follow up with them about as this could mean:
-..- They have not yet submitted a weekly check in form
-..- They didn't work on the Coursera class this week (perhaps they were on vacation)
-..- They are stuck on something for Coursera, and did not report they worked on anything because they haven't made it any further
+  - They have not yet submitted a weekly check in form
+  - They didn't work on the Coursera class this week (perhaps they were on vacation)
+  - They are stuck on something for Coursera, and did not report they worked on anything because they haven't made it any further
 * "Overall, how do you feel about this week's material?" (column E) highlights red if it is either a 1 or 2
 * "What learning zone were you in? Please, check all that apply." (column I) highlights red if they were in the strain zone
 * "How would you rate the social community?" (column K) highlights red if it is either a 1 or 2
@@ -159,4 +159,4 @@ If you come across a bug or come up with a feature you would like to see, please
 I'll get to fixing these as soon as I can!
 ## Changelog
 * v0.1.0
-..- Created the basic feature set including keeping attendance, sending weekly check-in forms, and basic check-in analysis
+  - Created the basic feature set including keeping attendance, sending weekly check-in forms, and basic check-in analysis

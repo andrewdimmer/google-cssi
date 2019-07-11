@@ -29,7 +29,20 @@ To set this up, you need to generate a pre-filled link with placeholder values t
 
 To create and add the pre-filled link to the script:
 1. Open the form
-2. TODO: ADD MORE HERE!
+2. Click the three dots in the upper right-hand corner
+3. Click on "Get pre-filled link"
+![Create A Link](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/CreateALink.png)
+4. Enter "FIRST" in the `First Name` field
+5. Enter "LAST" in the `Last Name` field
+6. Enter "EMAIL" in the `Email Address` field
+7. Select "Finished" from the drop down in the `Course` field
+8. Scroll down to the bottom and click the "GET LINK" button
+9. Click on "COPY LINK" in the black box that popped on in the lower left-hand corner
+10. Open the spreadsheet
+11. Click on the "Tools" menu
+12. Click on "Script editor"
+13. Paste the pre-filled link into the empty double quotes on line 2
+14. Click the Save button (the red * next to the file name should disappear if the file saved successfully)
 
 ### 4. Test the Email System
 The Google CSSI Involvement Manager parses the email from a Google Doc so that you can change the email without editing the code, once you set the source of the email.
@@ -42,13 +55,13 @@ To run the test function:
 3. Click on "Script editor"
 4. Edit lines 9-11 to add your name and email
 5. Select the `test` function from the runner drop down, then click run
-![Run a Function](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/RunAFunction.png)
+![Run a Function](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/RunAFunction.png)
 
 When you run a script the first time, it asks you to confirm the permission scope. When the "Authorization required" pop-up comes up, click "Review Permissions", then Login.
-![Authorization Required](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/AuthorizationRequired.png)
+![Authorization Required](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/AuthorizationRequired.png)
 
 Under some circumstances, there is an error saying the "The app isn't verified". Click "Advanced" then "Go to Google CSSI 2019 Involvement Sheet" to get past this error. After you do that, you can just click the "Allow" button, and the email should send.
-![The app isn't verified](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/AppIsntVerified.png)
+![The app isn't verified](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/AppIsntVerified.png)
 
 Check your inbox to see that the email delivered.
 ### 5. Edit the email content
@@ -82,6 +95,7 @@ To update the email link:
 2. Click on the "Tools" menu
 3. Click on "Script editor"
 4. Replace the link that is already on line 1 with the share link of your new Google Doc
+5. Click the Save button (the red * next to the file name should disappear if the file saved successfully)
 ### 6. Create Triggers to Send Emails
 To send an email at a specific date and time, you can create a project triggers that will execute the code for you.
 
@@ -93,7 +107,7 @@ To do this:
 5. Click on "Current project's triggers"
 6. Click "+ Add Trigger" in the bottom right hand corner for each trigger you wish to add. Follow the image below for the settings to create a date-time trigger.
 
-![Date Time Trigger](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/CreateATrigger.png)
+![Date Time Trigger](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/CreateATrigger.png)
 
 Recommended dates for setting up the triggers based on when the spreadsheet things the week starts are on Thursday nights so that students can report what they have done for the week anytime between Friday and Monday.
 * 2019-07-11 20:00

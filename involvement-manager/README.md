@@ -1,6 +1,6 @@
 # Google CSSI Involvement Manager
-###### Created by Andrew Dimmer
-###### v0.1.0
+##### Created by Andrew Dimmer
+##### v0.1.0
 This program is designed to help TAs automatically check in with their students each week, and track who is involved.
 
 > <g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> Warning! This was created in about 4 hours so that I could use it myself. No features claim to be stable, and bugs may exist. If you come across a bug or come up with a feature you would like to see, please log it [here](https://github.com/andrewdimmer/google-cssi/issues).
@@ -31,7 +31,9 @@ To create and add the pre-filled link to the script:
 1. Open the form
 2. Click the three dots in the upper right-hand corner
 3. Click on "Get pre-filled link"
-![Create A Link](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/CreateALink.png)
+
+![Create A Link](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/CreateALink.png)
+
 4. Enter "FIRST" in the `First Name` field
 5. Enter "LAST" in the `Last Name` field
 6. Enter "EMAIL" in the `Email Address` field
@@ -55,13 +57,16 @@ To run the test function:
 3. Click on "Script editor"
 4. Edit lines 9-11 to add your name and email
 5. Select the `test` function from the runner drop down, then click run
-![Run a Function](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/RunAFunction.png)
+
+![Run a Function](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/RunAFunction.PNG)
 
 When you run a script the first time, it asks you to confirm the permission scope. When the "Authorization required" pop-up comes up, click "Review Permissions", then Login.
-![Authorization Required](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/AuthorizationRequired.png)
+
+![Authorization Required](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/AuthorizationRequired.PNG)
 
 Under some circumstances, there is an error saying the "The app isn't verified". Click "Advanced" then "Go to Google CSSI 2019 Involvement Sheet" to get past this error. After you do that, you can just click the "Allow" button, and the email should send.
-![The app isn't verified](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/AppIsntVerified.png)
+
+![The app isn't verified](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/AppIsntVerified.PNG)
 
 Check your inbox to see that the email delivered.
 ### 5. Edit the email content
@@ -97,7 +102,7 @@ To update the email link:
 4. Replace the link that is already on line 1 with the share link of your new Google Doc
 5. Click the Save button (the red * next to the file name should disappear if the file saved successfully)
 ### 6. Create Triggers to Send Emails
-To send an email at a specific date and time, you can create a project triggers that will execute the code for you.
+To send an email at a specific date and time, you can create project triggers that will execute the code for you.
 
 To do this:
 1. Open the spreadsheet.
@@ -107,7 +112,7 @@ To do this:
 5. Click on "Current project's triggers"
 6. Click "+ Add Trigger" in the bottom right hand corner for each trigger you wish to add. Follow the image below for the settings to create a date-time trigger.
 
-![Date Time Trigger](https://github.com/andrewdimmer/google-cssi/involvement-manager/images/CreateATrigger.png)
+![Date Time Trigger](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/CreateATrigger.png)
 
 Recommended dates for setting up the triggers based on when the spreadsheet things the week starts are on Thursday nights so that students can report what they have done for the week anytime between Friday and Monday.
 * 2019-07-11 20:00
@@ -119,10 +124,10 @@ Recommended dates for setting up the triggers based on when the spreadsheet thin
 * 2019-08-22 20:00
 * 2019-08-29 20:00
 
-> Note: if you have already missed any trigger, you can always send the email yourself by following the same steps as 4. Test the Email System, just select the `sendEmails` function instead of `test`.
+> Note: if you have already missed the execution time of any trigger, you can always send the email yourself by following the same steps as 4. Test the Email System, just select the `sendEmails` function instead of `test`.
 ## Using the Involvement Manager
 ### Keep attendance at different events
-You might be interested in track who and how many people are coming to each of your events (office hours, tech talks, and cohort meetings).
+You might be interested in tracking who and how many people are coming to each of your events (office hours, tech talks, and cohort meetings).
 
 To log attendance, simply open the spreadsheet and go to the correct sheet for each event:
 * Office Hours: `Office Hours Attendance` (color coded blue)
@@ -135,15 +140,15 @@ Finally, check off the checkbox for each person who attended.
 
 The spreadsheet will automatically count the number of people at the event based on the number of boxes checked, as well as increase the total number of events that each checked off user attended (stored on the `Names and Info` sheet).
 
-> Note: If you do more events than there are columns, you can safely add columns anywhere to the right of column C with no problem on the programming or formulas. Just be sure to copy and paste in the formula to get the total number of attendees for that event from another column.
+> Note: If you do more events than there are columns, you can safely add columns anywhere to the right of column C with no problem with the programming or formulas. Just be sure to copy and paste in the formula to get the total number of attendees for that event from another column.
 ### Viewing Weekly Check-Ins
 You may wish to view all Weekly Check-Ins at the same time. This can be done on the `Check-In Data` sheet (color coded red), although this view cramped and somewhat unhelpful.
 
-To instead view all of the check-ins for a specific week, use the Check-In Summary` sheet (color coded yellow). This provides a cleaner view, as well as conditional formatting to alert you to things you may want to follow up with your students about.
+To instead view all of the check-ins for a specific week, use the `Check-In Summary` sheet (color coded yellow). This provides a cleaner view, as well as conditional formatting to alert you to things you may want to follow up with your students about.
 
-To select the week for which the check-in data is displayed, select the week number from the drop down in cell B1. The rest of the data will automatically populate.
+To select the week for which the check-in data is displayed, select the week number from the drop down in cell `B1`. The rest of the data will automatically populate.
 
-Finally, there is some useful conditional formatting to help you identify possible issues and discuss them with your students:
+Finally, there is some useful conditional formatting to help you identify possible issues to discuss with your students:
 * "What did I work on this week?" (column D) highlights red if the latest week they are working on is more than two weeks behind the current week (they are working on week 2 work during week 5 of the program)
   - By the time that this highlights red, they will need to do more than one week of the Coursera class per week of the summer to finish before the school year starts
 * "What did I work on this week?" (column D) highlights yellow if it is blank. This is something you would likely want to follow up with them about as this could mean:

@@ -1,6 +1,6 @@
 # Google CSSI Involvement Manager
 ##### Created by Andrew Dimmer
-##### v0.1.0
+##### v0.1.1
 This program is designed to help TAs automatically check in with their students each week, and track who is involved.
 
 > <g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> Warning! This was created in about 4 hours so that I could use it myself. No features claim to be stable, and bugs may exist. If you come across a bug or come up with a feature you would like to see, please log it [here](https://github.com/andrewdimmer/google-cssi/issues).
@@ -45,7 +45,7 @@ To create and add the pre-filled link to the script:
 10. Open the spreadsheet
 11. Click on the "Tools" menu
 12. Click on "Script editor"
-13. Paste the pre-filled link into the empty double quotes on line 2
+13. Paste the pre-filled link into the empty double quotes on line 6
 14. Click the Save button (the red * next to the file name should disappear if the file saved successfully)
 
 ### 4. Test the Email System
@@ -57,7 +57,7 @@ To run the test function:
 1. Open the spreadsheet
 2. Click on the "Tools" menu
 3. Click on "Script editor"
-4. Edit lines 9-11 to add your name and email
+4. Edit lines 13-15 to add your name and email
 5. Select the `test` function from the runner drop down, then click run
 
 ![Run a Function](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/RunAFunction.PNG)
@@ -101,7 +101,7 @@ To update the email link:
 1. Open the spreadsheet.
 2. Click on the "Tools" menu
 3. Click on "Script editor"
-4. Replace the link that is already on line 1 with the share link of your new Google Doc
+4. Replace the link that is already on line 5 with the share link of your new Google Doc
 5. Click the Save button (the red * next to the file name should disappear if the file saved successfully)
 ### 6. Create Triggers to Send Emails
 To send an email at a specific date and time, you can create project triggers that will execute the code for you.

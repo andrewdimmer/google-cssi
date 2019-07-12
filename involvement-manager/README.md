@@ -11,6 +11,8 @@ Go to the [template](https://drive.google.com/open?id=1aMgesjItl6rur0XAhSf4itqCf
 
 This should create a copy of the spreadsheet, check-in form, and script file.
 
+> Note: No matter which folder you put your spreadsheet in when making the copy, the form always resides in "My Drive" to begin. It is recommended that you move this to the same place you store the spreadsheet.
+
 > Please then grant Morgan Lynch edit access to the spreadsheet so that she can view the check-in information as well.
 ### 2. Add Students
 Next, you need to add your students to the spreadsheet. All of the sheets in the spreadsheet pull their user data from one master list, so you only need to add the names once.
@@ -30,23 +32,25 @@ One of the benefits of using a script to send the check-in form to each person i
 To set this up, you need to generate a pre-filled link with placeholder values that the script will later replace with the actual values from the spreadsheet.
 
 To create and add the pre-filled link to the script:
-1. Open the form
-2. Click the three dots in the upper right-hand corner
-3. Click on "Get pre-filled link"
+1. Open the spreadsheet
+2. Click on the "Forms" menu
+3. Click on "Edit form"
+4. On the form that it opens up, click the three dots in the upper right-hand corner
+5. Click on "Get pre-filled link"
 
 ![Create A Link](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/images/CreateALink.png)
 
-4. Enter "FIRST" in the `First Name` field
-5. Enter "LAST" in the `Last Name` field
-6. Enter "EMAIL" in the `Email Address` field
-7. Select "Finished" from the drop down in the `Course` field
-8. Scroll down to the bottom and click the "GET LINK" button
-9. Click on "COPY LINK" in the black box that popped on in the lower left-hand corner
-10. Open the spreadsheet
-11. Click on the "Tools" menu
-12. Click on "Script editor"
-13. Paste the pre-filled link into the empty double quotes on line 6
-14. Click the Save button (the red * next to the file name should disappear if the file saved successfully)
+6. Enter "FIRST" in the `First Name` field
+7. Enter "LAST" in the `Last Name` field
+8. Enter "EMAIL" in the `Email Address` field
+9. Select "Finished" from the drop down in the `Course` field
+10. Scroll down to the bottom and click the "GET LINK" button
+11. Click on "COPY LINK" in the black box that popped on in the lower left-hand corner
+12. Go back to the spreadsheet
+13. Click on the "Tools" menu
+14. Click on "Script editor"
+15. Paste the pre-filled link into the empty double quotes on line 6
+16. Click the Save button (the red * next to the file name should disappear if the file saved successfully)
 
 ### 4. Test the Email System
 The Google CSSI Involvement Manager parses the email from a Google Doc so that you can change the email without editing the code, once you set the source of the email.

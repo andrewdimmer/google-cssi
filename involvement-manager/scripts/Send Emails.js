@@ -1,6 +1,6 @@
 // Google CSSI Involvement Manager
 // Created by Andrew Dimmer
-// v0.1.1
+// v0.1.2
 
 var EMAIL_LINK = "https://docs.google.com/document/d/1vCxeFkInr7jjpeNTb-0WD9KTIeciA9mY8JJ0-erLj8I/edit?usp=sharing";         // Replace this link with your email
 var FORM_PREFILL_LINK = "";         // Replace this link with the prefilled link for your form.
@@ -28,17 +28,13 @@ function test() {
 
 // Sends emails
 function sendEmails() {
-  var email = parseDocToEmail(EMAIL_LINK);
+  var emailTemplate = parseDocToEmail(EMAIL_LINK);
   for (var i = 0; i < STUDENTS.length; i++) {
     if (STUDENTS[i][2].length > 0) {
       var link = getFormLink(STUDENTS[i]);
-      email.htmlBody = email.htmlBody.replace("[FIRST_NAME_SHORTCODE]",STUDENTS[i][0]);
-      email.plainText = email.plainText.replace("[FIRST_NAME_SHORTCODE]",STUDENTS[i][0]);
-      email.htmlBody = email.htmlBody.replace("[LAST_NAME_SHORTCODE]",STUDENTS[i][1]);
-      email.plainText = email.plainText.replace("[LAST_NAME_SHORTCODE]",STUDENTS[i][1]);
-      email.htmlBody = email.htmlBody.replace("[LINK_SHORTCODE]",link.htmlBody);
-      email.plainText = email.plainText.replace("[LINK_SHORTCODE]",link.plainText);
-      GmailApp.sendEmail(STUDENTS[i][2], email.subject, email.plainText, {"htmlBody": email.htmlBody});
+      var currentEmailHTML = emailTemplate.htmlBody.replace("[FIRST_NAME_SHORTCODE]",STUDENTS[i][0]).replace("[LAST_NAME_SHORTCODE]",STUDENTS[i][1]).replace("[LINK_SHORTCODE]",link.htmlBody);
+      var currentEmailText = emailTemplate.plainText.replace("[FIRST_NAME_SHORTCODE]",STUDENTS[i][0]).replace("[LAST_NAME_SHORTCODE]",STUDENTS[i][1]).replace("[LINK_SHORTCODE]",link.htmlBody);
+      GmailApp.sendEmail(STUDENTS[i][2], emailTemplate.subject, currentEmailText, {"htmlBody": currentEmailHTML});
     }
   }
 }

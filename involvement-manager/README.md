@@ -1,6 +1,6 @@
 # Google CSSI Involvement Manager
 ##### Created by Andrew Dimmer
-##### v0.1.1
+##### v0.1.2
 This program is designed to help TAs automatically check in with their students each week, and track who is involved.
 
 > <g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji> Warning! This was created in about 4 hours so that I could use it myself. No features claim to be stable, and bugs may exist. If you come across a bug or come up with a feature you would like to see, please log it [here](https://github.com/andrewdimmer/google-cssi/issues).
@@ -164,10 +164,29 @@ Finally, there is some useful conditional formatting to help you identify possib
 * "Overall, how do you feel about this week's material?" (column E) highlights red if it is either a 1 or 2
 * "What learning zone were you in? Please, check all that apply." (column I) highlights red if they were in the strain zone
 * "How would you rate the social community?" (column K) highlights red if it is either a 1 or 2
+## Upgrading
+### v0.1.0 --> v0.1.1 --> v0.1.2
+It is recommended to upgrade the code in the Involvement Manager for both of these updates as soon as possible.
+
+To do so:
+1. Open the [`scripts/Email Scripts.js`](https://github.com/andrewdimmer/google-cssi/blob/master/involvement-manager/scripts/Send%20Emails.js) file in this repo
+2. Copy the `test` and `sendEmails` functions
+3. Open the spreadsheet.
+4. Click on the "Tools" menu
+5. Click on "Script editor"
+6. Paste over the old `test` and `sendEmails` functions
+7. Update the version number on line 3
+8. Click the Save button (the red * next to the file name should disappear if the file saved successfully)
+
+This update can be done in place with no impact on data or avaliable of the service.
 ## Issue Tracking
 If you come across a bug or come up with a feature you would like to see, please log it [here](https://github.com/andrewdimmer/google-cssi/issues).
 
 I'll get to fixing these as soon as I can!
 ## Changelog
+* v0.1.2
+  - Fixed a bug in the sendEmails function where it would fill the shortcode information of the first person in all emails sent
+* v0.1.1
+  - Fixed a bug in the test function so that it now correctly references the manually entered test data
 * v0.1.0
   - Created the basic feature set including keeping attendance, sending weekly check-in forms, and basic check-in analysis
